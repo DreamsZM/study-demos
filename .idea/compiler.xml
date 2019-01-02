@@ -8,6 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demos-designpattern" />
         <module name="demos-threadlocal" />
+        <module name="design-pattern" />
+        <module name="flink-demo" />
+        <module name="threadlocal" />
       </profile>
     </annotationProcessing>
   </component>

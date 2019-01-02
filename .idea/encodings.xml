@@ -4,5 +4,6 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demos-designpattern" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demos-threadlocal" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/flink-demo" charset="UTF-8" />
   </component>
 </project>
