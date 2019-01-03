@@ -3,6 +3,7 @@ package com.zy.bio;
 import com.zy.common.utils.ThreadPoolUtil;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.net.Socket;
@@ -17,11 +18,15 @@ public class IOClient {
 
         try {
             OutputStream outputStream = socket.getOutputStream();
+            InputStream inputStream = socket.getInputStream();
             ScheduledExecutorService executorService = ThreadPoolUtil.getScheduledThreadPool(1);
 
             executorService.scheduleAtFixedRate(()->{
                 try {
                     outputStream.write("Hello".getBytes());
+                    byte[] bytes = new byte[1024];
+                    inputStream.read(bytes);
+                    System.out.println(new String(bytes));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

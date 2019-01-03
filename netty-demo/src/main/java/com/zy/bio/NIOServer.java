@@ -1,6 +1,7 @@
 package com.zy.bio;
 
 import com.zy.common.utils.ThreadPoolUtil;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -10,6 +11,8 @@ import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.Charset;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
@@ -21,6 +24,7 @@ import java.util.concurrent.Executors;
  * 一个Selector检测是否新连接
  * 另一个Selector检测是否有数据读写发生
  */
+@Slf4j
 public class NIOServer {
 
     private static final int PORT = 8888;
@@ -37,6 +41,7 @@ public class NIOServer {
                 serverSocketChannel.bind(new InetSocketAddress(PORT));
                 serverSocketChannel.configureBlocking(false);
                 serverSocketChannel.register(serverSelector, SelectionKey.OP_ACCEPT);
+                log.info("ServerSocketChannel register");
 
                 //TODO:
                 while (true){
@@ -52,6 +57,7 @@ public class NIOServer {
                                     SocketChannel socketChannel = ((ServerSocketChannel)selectionKey.channel()).accept();
                                     socketChannel.configureBlocking(false);
                                     socketChannel.register(clientSelector, SelectionKey.OP_READ);
+                                    log.info("new client register");
                                 } finally {
                                     iterator.remove();
                                 }
@@ -80,7 +86,13 @@ public class NIOServer {
                                     ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
                                     socketChannel.read(byteBuffer);
                                     byteBuffer.flip();
-                                    System.out.println(Charset.defaultCharset().newDecoder().decode(byteBuffer).toString());
+                                    log.info("read some bytes");
+                                    String message = Charset.defaultCharset().newDecoder().decode(byteBuffer).toString();
+                                    System.out.println(message);
+                                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss");
+
+                                    socketChannel.write(ByteBuffer.wrap(("From server:" + simpleDateFormat.format(new Date())
+                                            + " " + message).getBytes()));
                                 } finally {
                                     iterator.remove();
                                     selectionKey.interestOps(SelectionKey.OP_READ);

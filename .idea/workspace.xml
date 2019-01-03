@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9f248d6-d9c3-443f-8b77-913fac9f406f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/NIOServerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/resources/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netty-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/netty-demo/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/IOClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/IOClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/IOServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/IOServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/NIOServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/NIOServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netty-demo/src/main/java/common/NamedThreadFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/zy/common/utils/NamedThreadFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netty-demo/src/main/java/common/ThreadPoolUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/zy/common/utils/ThreadPoolUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/NIOServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+            <state relative-caret-position="286">
+              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,32 +47,33 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/netty-demo/src/main/resources/log4j.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/NIOServerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+            <state relative-caret-position="562">
+              <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/nio/channels/SelectionKey.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2222">
-              <caret line="125" column="37" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/net/Socket.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="568" selection-start-line="568" selection-end-line="568" />
             </state>
           </provider>
         </entry>
@@ -83,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/IOClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="40" />
+            <state relative-caret-position="584">
+              <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,7 +151,6 @@
         <option value="$PROJECT_DIR$/flink-demo/src/main/java/com/zy/demo/flink/iteration/IterativeExample.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/flink-demo/src/test/java/com/zy/demo/Test.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/flink-demo/src/main/java/com/zy/demo/flink/iteration/IterateExample.java" />
         <option value="$PROJECT_DIR$/flink-demo/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/demos-designpattern/src/main/java/com/zy/demo/design/decorator/CondimentDecorator.java" />
@@ -168,9 +165,11 @@
         <option value="$PROJECT_DIR$/common/src/main/java/com/zy/common/utils/NamedThreadFactory.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/zy/common/utils/ThreadPoolUtil.java" />
         <option value="$PROJECT_DIR$/netty-demo/pom.xml" />
-        <option value="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/NIOServer.java" />
         <option value="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/NIOServerTest.java" />
         <option value="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/IOServer.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/netty-demo/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/NIOServer.java" />
         <option value="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/IOClient.java" />
       </list>
     </option>
@@ -293,6 +292,14 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="bio" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -305,7 +312,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/flink-demo/src/test/java/com/zy/demo/Test.java" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546526196638" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546526946035" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -331,7 +338,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.NIOServer">
+  <component name="RunManager" selected="Application.IOClient">
     <configuration name="IOClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zy.bio.IOClient" />
       <module name="netty-demo" />
@@ -419,17 +426,18 @@
       <updated>1546313080072</updated>
       <workItem from="1546313088764" duration="8574000" />
       <workItem from="1546416747218" duration="9546000" />
-      <workItem from="1546511621192" duration="10486000" />
+      <workItem from="1546511621192" duration="11217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28606000" />
+    <option name="totallyTimeSpent" value="29337000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -438,7 +446,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962137" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32962137" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32962137" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -585,14 +593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -907,16 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/NIOServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/IOServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -927,20 +917,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/IOClient.java">
+    <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/NIOServerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="40" />
+        <state relative-caret-position="562">
+          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/NIOServerTest.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="330">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/netty-demo/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/IOClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/NIOServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
