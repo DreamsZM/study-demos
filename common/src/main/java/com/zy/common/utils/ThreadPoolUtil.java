@@ -1,4 +1,4 @@
-package common;
+package com.zy.common.utils;
 
 import java.util.concurrent.*;
 
@@ -20,4 +20,9 @@ public class ThreadPoolUtil {
                 new LinkedBlockingDeque<>(queueCapacity),
                 Executors.defaultThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
     }
+
+    public static ScheduledExecutorService getScheduledThreadPool(int corePoolSize){
+        return new ScheduledThreadPoolExecutor(corePoolSize, new NamedThreadFactory());
+    }
+
 }

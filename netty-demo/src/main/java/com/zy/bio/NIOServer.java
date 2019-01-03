@@ -1,6 +1,6 @@
 package com.zy.bio;
 
-import common.ThreadPoolUtil;
+import com.zy.common.utils.ThreadPoolUtil;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -15,6 +15,12 @@ import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+
+/**
+ * NIO 编程模型需要自己去实现
+ * 一个Selector检测是否新连接
+ * 另一个Selector检测是否有数据读写发生
+ */
 public class NIOServer {
 
     private static final int PORT = 8888;
@@ -42,7 +48,8 @@ public class NIOServer {
                             SelectionKey selectionKey = iterator.next();
                             if (selectionKey.isAcceptable()){
                                 try {
-                                    SocketChannel socketChannel = (SocketChannel) selectionKey.channel();
+                                    //TODO:
+                                    SocketChannel socketChannel = ((ServerSocketChannel)selectionKey.channel()).accept();
                                     socketChannel.configureBlocking(false);
                                     socketChannel.register(clientSelector, SelectionKey.OP_READ);
                                 } finally {

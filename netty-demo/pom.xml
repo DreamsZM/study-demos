@@ -11,5 +11,12 @@
 
     <artifactId>netty-demo</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.zy</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

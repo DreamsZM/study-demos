@@ -1,4 +1,4 @@
-package common;
+package com.zy.common.utils;
 
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
