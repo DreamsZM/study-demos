@@ -12,6 +12,7 @@
         <module>demos-threadlocal</module>
       <module>demos-designpattern</module>
       <module>flink-demo</module>
+        <module>netty-demo</module>
     </modules>
 
     <name>demos</name>
