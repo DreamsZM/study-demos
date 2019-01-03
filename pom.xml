@@ -13,6 +13,7 @@
       <module>demos-designpattern</module>
       <module>flink-demo</module>
         <module>netty-demo</module>
+        <module>common</module>
     </modules>
 
     <name>demos</name>

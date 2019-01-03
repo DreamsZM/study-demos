@@ -1,6 +1,7 @@
 package com.zy.bio;
 
 import common.NamedThreadFactory;
+import common.ThreadPoolUtil;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -18,9 +19,11 @@ public class IOServer {
             ServerSocket serverSocket = new ServerSocket(8888);
 
             ThreadFactory threadFactory = new NamedThreadFactory();
-            ExecutorService singleThreadPool = new ThreadPoolExecutor(1, 1, 0,
-                    TimeUnit.MILLISECONDS, new LinkedBlockingDeque<>(1024),
-                    threadFactory, new ThreadPoolExecutor.AbortPolicy());
+//            ExecutorService singleThreadPool = new ThreadPoolExecutor(1, 1, 0,
+//                    TimeUnit.MILLISECONDS, new LinkedBlockingDeque<>(1024),
+//                    threadFactory, new ThreadPoolExecutor.AbortPolicy());
+
+            ExecutorService singleThreadPool = ThreadPoolUtil.getThreadPool(1, 1, 1024);
             singleThreadPool.execute(()->{
                 while (true){
                     try {
