@@ -7,6 +7,9 @@ import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.string.StringEncoder;
+import io.netty.util.AttributeKey;
+import io.netty.util.concurrent.Future;
+import io.netty.util.concurrent.GenericFutureListener;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DateUtils;
 
@@ -21,6 +24,7 @@ public class NettyClient {
     private static final String HOST = "localhost";
 
     private static final int PORT = 8000;
+    private static final int MAX_RETRY = 5;
 
     public static void main(String[] args) throws InterruptedException {
         NioEventLoopGroup workerGroup = new NioEventLoopGroup();
@@ -29,6 +33,14 @@ public class NettyClient {
 
         bootstrap.group(workerGroup)
                 .channel(NioSocketChannel.class)
+                //绑定自定义属性，通过channel.attr()获取
+                .attr(AttributeKey.newInstance("clientName"), "nettyClient")
+                //连接超时时间
+                .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 5000)
+                //是够开启TCP底层心跳机制
+                .option(ChannelOption.SO_KEEPALIVE, true)
+                //Nagle算法，开启减少发送次数，减少网络流量，但是会有延迟
+                .option(ChannelOption.TCP_NODELAY, false)
                 .handler(new ChannelInitializer<NioSocketChannel>() {
             @Override
             protected void initChannel(NioSocketChannel nioSocketChannel) throws Exception {
@@ -37,19 +49,7 @@ public class NettyClient {
             }
         });
 
-        ChannelFuture channelFuture = bootstrap.connect(new InetSocketAddress(HOST, PORT));
-        channelFuture.addListener(new ChannelFutureListener() {
-            @Override
-            public void operationComplete(ChannelFuture channelFuture) throws Exception {
-                if (channelFuture.isSuccess()){
-                    log.info("connect success");
-                } else {
-                    //todo：失败重试机制，重试n次后，抛出异常
-                    log.error("connect error, " + HOST + ":" + PORT);
-                    throw new RuntimeException("can not connect");
-                }
-            }
-        });
+        ChannelFuture channelFuture = connect(bootstrap, HOST, PORT);
 
         Channel channel = channelFuture.channel();
         while (true){
@@ -66,4 +66,51 @@ public class NettyClient {
 //        scheduledThreadPool.shutdown();
 
     }
+
+    /**
+     * 利用递归进行重试连接
+     * todo:指定重试次数，防止一直重试，无法连接成功
+     * @param bootstrap
+     * @param host
+     * @param port
+     */
+    private static ChannelFuture connect(Bootstrap bootstrap, String host, int port){
+        ChannelFuture channelFuture = bootstrap.connect(host, port);
+        channelFuture.addListener(new GenericFutureListener<Future<? super Void>>() {
+            @Override
+            public void operationComplete(Future<? super Void> future) throws Exception {
+                if (future.isSuccess()){
+                    log.info("connect sucess, host:" + host + ", port:" + port);
+                } else {
+                    log.error("connect error, 重试");
+                    connect(bootstrap, host, port);
+                }
+            }
+        });
+
+        return channelFuture;
+    }
+
+    private static void connect(Bootstrap bootstrap, String host, int port, int retry){
+        ChannelFuture channelFuture = bootstrap.connect(host, port).addListener(future -> {
+            if (future.isSuccess()){
+                log.info("connect sucess, host:" + host + ", port:" + port);
+            } else if (retry == 0){
+                log.error("重试结束，无法建立连接");
+                throw new RuntimeException("连接失败");
+            } else {
+                int order = MAX_RETRY - retry + 1;
+                //根据重试次数，设置不同的延迟时间
+                int delay = 1 << order;
+                //获取启动时设置的线程组
+                log.error("重试" + order + "次");
+                //获取线程组执行定时任务
+                NioEventLoopGroup eventLoopGroup = (NioEventLoopGroup) bootstrap.config().group();
+                eventLoopGroup.schedule(()->{
+                    connect(bootstrap, host, port, retry - 1);
+                }, delay, TimeUnit.SECONDS);
+            }
+        });
+    }
+
 }
