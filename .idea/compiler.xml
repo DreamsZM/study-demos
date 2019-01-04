@@ -13,6 +13,7 @@
         <module name="flink-demo" />
         <module name="jvm-demo" />
         <module name="netty-demo" />
+        <module name="rocketmq-remoting" />
         <module name="threadlocal" />
       </profile>
     </annotationProcessing>

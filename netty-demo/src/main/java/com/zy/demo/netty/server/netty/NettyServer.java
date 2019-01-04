@@ -1,5 +1,6 @@
 package com.zy.demo.netty.server.netty;
 
+import com.zy.demo.netty.server.netty.handler.FirstServerHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -14,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class NettyServer {
 
-    private static final int PORT = 8000;
+    private static final int PORT = 8001;
 
     public static void main(String[] args) throws InterruptedException {
         //1、线程模型，提供两个线程组，一个用于处理连接请求，另一个处理连接的读写
@@ -31,15 +32,7 @@ public class NettyServer {
                     @Override
                     protected void initChannel(NioSocketChannel socketChannel) throws Exception {
                         ChannelPipeline channelPipeline = socketChannel.pipeline();
-                        channelPipeline.addLast(new StringDecoder())
-                                .addLast(new SimpleChannelInboundHandler<String>() {
-
-                            @Override
-                            protected void channelRead0(ChannelHandlerContext channelHandlerContext, String s) throws Exception {
-                                log.info("read message from client");
-                                System.out.println("From client:" + s);
-                            }
-                        });
+                        channelPipeline.addLast(new FirstServerHandler());
                     }
                 });
         bind(serverBootstrap, PORT);

@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9f248d6-d9c3-443f-8b77-913fac9f406f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/zy/demo/common/utils/ByteBufUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/zy/demo/common/utils/JedisUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/handler/FirstClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/handler/FirstServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netty-demo/src/test/java/com/zy/demo/netty/test/ByteBufTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketmq-demo/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/NettyClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/NettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -14,6 +25,8 @@
     <ignored path="$PROJECT_DIR$/netty-demo/target/" />
     <ignored path="$PROJECT_DIR$/common/target/" />
     <ignored path="$PROJECT_DIR$/jvm-demo/target/" />
+    <ignored path="$PROJECT_DIR$/rocketmq-demo/target/" />
+    <ignored path="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,54 +36,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/io/IOClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/netty-demo/src/test/java/com/zy/demo/netty/test/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="15" column="99" selection-start-line="15" selection-start-column="99" selection-end-line="15" selection-end-column="99" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/io/IOServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/io/NIOServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/NettyServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="528">
+              <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#854#1673#0" expanded="true" />
-                <element signature="e#1221#1631#0" expanded="true" />
-                <element signature="e#1630#1631#0" expanded="true" />
                 <element signature="e#1672#1673#0" expanded="true" />
               </folding>
             </state>
@@ -78,29 +50,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/zy/demo/common/utils/DateUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#395#396#0" expanded="true" />
-                <element signature="e#427#428#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/src/main/resources/log4j.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/NettyClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="93" column="34" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
+            <state relative-caret-position="326">
+              <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1127#1451#0" expanded="true" />
@@ -111,20 +64,90 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Void.java">
+        <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/handler/FirstClientHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+            <state relative-caret-position="225">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/netty-demo/pom.xml">
+        <entry file="file://$PROJECT_DIR$/netty-demo/src/test/java/com/zy/demo/netty/test/ByteBufTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rocketmq-demo/pom.xml">
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/pom.xml">
           <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="462">
+              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/zy/demo/common/utils/ByteBufUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#153#154#0" expanded="true" />
+                <element signature="e#187#188#0" expanded="true" />
+                <element signature="e#291#292#0" expanded="true" />
+                <element signature="e#320#321#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-buffer/4.1.32.Final/netty-buffer-4.1.32.Final-sources.jar!/io/netty/buffer/ByteBuf.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4158">
+              <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/netty-demo/src/test/java/com/zy/demo/netty/test/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="99" selection-start-line="15" selection-start-column="99" selection-end-line="15" selection-end-column="99" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/handler/FirstServerHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -185,6 +208,14 @@
         <option value="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/io/IOClient.java" />
         <option value="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/NettyServer.java" />
         <option value="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/NettyClient.java" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/zy/demo/common/utils/JedisUtil.java" />
+        <option value="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/handler/FirstServerHandler.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/zy/demo/common/utils/ByteBufUtil.java" />
+        <option value="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/handler/FirstClientHandler.java" />
+        <option value="$PROJECT_DIR$/netty-demo/src/test/java/com/zy/demo/netty/test/ByteBufTest.java" />
+        <option value="$PROJECT_DIR$/rocketmq-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/pom.xml" />
       </list>
     </option>
   </component>
@@ -202,13 +233,23 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="rocketmq-remoting" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="rocketmq-remoting" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1680" />
-    <option name="y" value="145" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -230,129 +271,13 @@
             <path>
               <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
               <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
               <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zy" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="netty" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="netty" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="netty" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="netty" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="netty" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="rocketmq-remoting" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -366,7 +291,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/flink-demo/src/test/java/com/zy/demo/Test.java" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546587938882" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546600947667" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -403,6 +328,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.zy.demo.netty.server.io.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JedisUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zy.demo.common.utils.JedisUtil" />
+      <module name="common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zy.demo.common.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -449,26 +387,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zy.demo.netty.test.Test" />
-      <module name="netty-demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zy.demo.netty.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.NettyClient" />
         <item itemvalue="Application.NettyServer" />
+        <item itemvalue="Application.JedisUtil" />
         <item itemvalue="Application.IOClient (1)" />
         <item itemvalue="Application.NIOServer" />
-        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -484,16 +409,24 @@
       <updated>1546313080072</updated>
       <workItem from="1546313088764" duration="8574000" />
       <workItem from="1546416747218" duration="9546000" />
-      <workItem from="1546511621192" duration="26248000" />
+      <workItem from="1546511621192" duration="32538000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44368000" />
+    <option name="totallyTimeSpent" value="50658000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2153518" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -504,11 +437,11 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962137" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32962137" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32628062" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32962137" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32962137" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
@@ -529,7 +462,7 @@
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Maven" order="9" weight="0.32995737" />
+      <window_info active="true" anchor="right" id="Maven" order="9" visible="true" weight="0.32995737" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2153518" />
@@ -573,146 +506,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flink/flink-java/1.7.1/flink-java-1.7.1-sources.jar!/org/apache/flink/api/java/ExecutionEnvironment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="795" column="14" selection-start-line="795" selection-start-column="14" selection-end-line="795" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flink/flink-java/1.7.1/flink-java-1.7.1-sources.jar!/org/apache/flink/api/java/operators/DataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-49">
-          <caret line="40" column="53" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flink-demo/src/test/java/com/zy/demo/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/com.zy.demo.design.decorator">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.zy.demo.design.decorator</OriginalElement>
-          <nodes>
-            <node x="190.0" y="80.0">com.zy.demo.design.decorator.HouseBlend</node>
-            <node x="197.5" y="0.0">com.zy.demo.design.decorator.Beverage</node>
-            <node x="0.0" y="80.0">com.zy.demo.design.decorator.CondimentDecorator</node>
-            <node x="328.0" y="80.0">com.zy.demo.design.decorator.Espresso</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="com.zy.demo.design.decorator.Espresso" target="com.zy.demo.design.decorator.Beverage">
-              <point x="0.0" y="-15.0" />
-              <point x="378.5" y="55.0" />
-              <point x="283.33333333333337" y="55.0" />
-              <point x="34.33333333333334" y="15.0" />
-            </edge>
-            <edge source="com.zy.demo.design.decorator.CondimentDecorator" target="com.zy.demo.design.decorator.Beverage">
-              <point x="0.0" y="-15.0" />
-              <point x="85.0" y="55.0" />
-              <point x="214.66666666666666" y="55.0" />
-              <point x="-34.33333333333334" y="15.0" />
-            </edge>
-            <edge source="com.zy.demo.design.decorator.HouseBlend" target="com.zy.demo.design.decorator.Beverage">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-376.0" y="20.0" />
-          <SelectedNodes>
-            <node>com.zy.demo.design.decorator.CondimentDecorator</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/java.io.BufferedInputStream">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>java.io.BufferedInputStream</OriginalElement>
-          <nodes>
-            <node x="11.0" y="240.0">java.io.FilterInputStream</node>
-            <node x="0.0" y="320.0">java.io.BufferedInputStream</node>
-            <node x="32.0" y="80.0">java.io.Closeable</node>
-            <node x="18.5" y="0.0">java.lang.AutoCloseable</node>
-            <node x="25.0" y="160.0">java.io.InputStream</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="java.io.InputStream" target="java.io.Closeable">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="java.io.Closeable" target="java.lang.AutoCloseable">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="java.io.BufferedInputStream" target="java.io.FilterInputStream">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="java.io.FilterInputStream" target="java.io.InputStream">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-376.0" y="-8.0" />
-          <SelectedNodes>
-            <node>java.io.BufferedInputStream</node>
-            <node>java.io.InputStream</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flink-demo/src/main/java/com/zy/demo/flink/iteration/IterateExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demos-designpattern/src/main/java/com/zy/demo/design/decorator/Beverage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/io/BufferedInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5346">
-          <caret line="268" column="43" selection-start-line="268" selection-start-column="36" selection-end-line="268" selection-end-column="43" />
-          <folding>
-            <element signature="e#5951#5952#0" expanded="true" />
-            <element signature="e#5996#5997#0" expanded="true" />
-            <element signature="e#17241#17242#0" expanded="true" />
-            <element signature="e#17268#17269#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demos-designpattern/src/main/java/com/zy/demo/design/decorator/CondimentDecorator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demos-designpattern/src/main/java/com/zy/demo/design/decorator/Espresso.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -859,10 +652,6 @@
           <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
@@ -1016,20 +805,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/netty-demo/src/test/java/com/zy/demo/netty/test/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="15" column="99" selection-start-line="15" selection-start-column="99" selection-end-line="15" selection-end-column="99" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/io/NIOServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1043,19 +822,84 @@
     <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/io/IOClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/zy/demo/common/utils/JedisUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#183#184#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/handler/FirstServerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-buffer/4.1.32.Final/netty-buffer-4.1.32.Final.jar!/io/netty/buffer/ByteBuf.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-buffer/4.1.32.Final/netty-buffer-4.1.32.Final-sources.jar!/io/netty/buffer/ByteBuf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4158">
+          <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/netty-demo/src/test/java/com/zy/demo/netty/test/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="99" selection-start-line="15" selection-start-column="99" selection-end-line="15" selection-end-column="99" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/zy/demo/common/utils/ByteBufUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#153#154#0" expanded="true" />
+            <element signature="e#187#188#0" expanded="true" />
+            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/NettyServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="528">
+          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#854#1673#0" expanded="true" />
-            <element signature="e#1221#1631#0" expanded="true" />
-            <element signature="e#1630#1631#0" expanded="true" />
             <element signature="e#1672#1673#0" expanded="true" />
           </folding>
         </state>
@@ -1063,13 +907,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/NettyClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="93" column="34" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
+        <state relative-caret-position="326">
+          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1127#1451#0" expanded="true" />
             <element signature="e#1450#1451#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/handler/FirstClientHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/netty-demo/src/test/java/com/zy/demo/netty/test/ByteBufTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
         </state>
       </provider>
     </entry>

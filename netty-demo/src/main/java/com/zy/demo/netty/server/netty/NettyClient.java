@@ -2,6 +2,7 @@ package com.zy.demo.netty.server.netty;
 
 import com.zy.demo.common.utils.DateUtil;
 import com.zy.demo.common.utils.ThreadPoolUtil;
+import com.zy.demo.netty.server.netty.handler.FirstClientHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -23,7 +24,7 @@ public class NettyClient {
 
     private static final String HOST = "localhost";
 
-    private static final int PORT = 8000;
+    private static final int PORT = 8001;
     private static final int MAX_RETRY = 5;
 
     public static void main(String[] args) throws InterruptedException {
@@ -45,18 +46,18 @@ public class NettyClient {
             @Override
             protected void initChannel(NioSocketChannel nioSocketChannel) throws Exception {
                 ChannelPipeline channelPipeline = nioSocketChannel.pipeline();
-                channelPipeline.addLast(new StringEncoder());
+                channelPipeline.addLast(new FirstClientHandler());
             }
         });
 
-        ChannelFuture channelFuture = connect(bootstrap, HOST, PORT);
+        connect(bootstrap, HOST, PORT, MAX_RETRY);
 
-        Channel channel = channelFuture.channel();
-        while (true){
-            channel.writeAndFlush(DateUtil.getFormatDate() + "Hello world from client");
-            log.info("send message success");
-            Thread.sleep(1000);
-        }
+//        Channel channel = channelFuture.channel();
+//        while (true){
+//            channel.writeAndFlush(DateUtil.getFormatDate() + "Hello world from client");
+//            log.info("send message success");
+//            Thread.sleep(1000);
+//        }
         //todo:why can not execute!!!
 //        ExecutorService scheduledThreadPool = ThreadPoolUtil.getScheduledThreadPool(1);
 //        ((ScheduledExecutorService) scheduledThreadPool).scheduleAtFixedRate(()->{
