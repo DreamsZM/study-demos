@@ -5,6 +5,12 @@ import io.netty.channel.Channel;
 
 public interface RemotingServer extends RemotingService {
 
+    //registerProcessor
+    //registerDefaultProcessor
+    //localListenPort
+    //getProcessorPair
+
+
     /**
      * 同步调用
      * @param channel
