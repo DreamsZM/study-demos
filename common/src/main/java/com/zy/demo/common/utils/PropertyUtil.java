@@ -1,4 +1,4 @@
-package com.zy.common.utils;
+package com.zy.demo.common.utils;
 
 import java.io.*;
 import java.util.Properties;

@@ -1,8 +1,12 @@
-package com.zy.common.utils;
+package com.zy.demo.common.utils;
 
+import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ *
+ */
 public class NamedThreadFactory implements ThreadFactory {
 
     private static final AtomicInteger poolNumber = new AtomicInteger(1);

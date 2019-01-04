@@ -1,11 +1,10 @@
-package com.zy.bio;
+package com.zy.demo.netty.server.io;
 
-import com.zy.common.utils.ThreadPoolUtil;
+import com.zy.demo.common.utils.ThreadPoolUtil;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -14,7 +13,7 @@ public class IOClient {
 
     public static void main(String[] args) throws IOException {
 
-        Socket socket = new Socket("localhost", 8888);
+        Socket socket = new Socket("localhost", 8000);
 
         try {
             OutputStream outputStream = socket.getOutputStream();
@@ -25,7 +24,9 @@ public class IOClient {
                 try {
                     outputStream.write("Hello".getBytes());
                     byte[] bytes = new byte[1024];
-                    inputStream.read(bytes);
+                    //TODO:会阻塞？？？
+
+//                    inputStream.read(bytes);
                     System.out.println(new String(bytes));
                 } catch (IOException e) {
                     e.printStackTrace();

@@ -1,6 +1,6 @@
-package com.zy.bio;
+package com.zy.demo.netty.server.io;
 
-import com.zy.common.utils.ThreadPoolUtil;
+import com.zy.demo.common.utils.ThreadPoolUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
@@ -16,7 +16,6 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 
 /**
@@ -27,7 +26,7 @@ import java.util.concurrent.Executors;
 @Slf4j
 public class NIOServer {
 
-    private static final int PORT = 8888;
+    private static final int PORT = 8000;
 
     public static void main(String[] args) throws IOException {
         //轮询是否有新的连接
@@ -54,6 +53,7 @@ public class NIOServer {
                             if (selectionKey.isAcceptable()){
                                 try {
                                     //TODO:
+                                    //Accepts a connection made to this channel's socket
                                     SocketChannel socketChannel = ((ServerSocketChannel)selectionKey.channel()).accept();
                                     socketChannel.configureBlocking(false);
                                     socketChannel.register(clientSelector, SelectionKey.OP_READ);
@@ -71,8 +71,7 @@ public class NIOServer {
             }
         });
 
-        ExecutorService executorService = Executors.newFixedThreadPool(1);
-        executorService.execute(()->{
+        ThreadPoolUtil.getThreadPool(1,1,1024).execute(()->{
             while (true){
                 try {
                     while (clientSelector.select(1) > 0) {
@@ -106,8 +105,8 @@ public class NIOServer {
             }
         });
 
+
         singleThreadPool.shutdown();
-        executorService.shutdown();
 
     }
 }
