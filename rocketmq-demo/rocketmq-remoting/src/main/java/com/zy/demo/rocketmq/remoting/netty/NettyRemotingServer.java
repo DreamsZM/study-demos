@@ -7,6 +7,7 @@ import com.zy.demo.rocketmq.remoting.RemotingServer;
 import com.zy.demo.rocketmq.remoting.protocol.RemotingCommand;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;
+import io.netty.buffer.PooledByteBufAllocator;
 import io.netty.channel.*;
 import io.netty.channel.epoll.EpollEventLoopGroup;
 import io.netty.channel.epoll.EpollServerSocketChannel;
@@ -20,6 +21,7 @@ import org.slf4j.LoggerFactory;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
@@ -144,7 +146,7 @@ public class NettyRemotingServer extends NettyRemotingAbstract implements Remoti
                         return new Thread(r, "NettyServerCodecThread_" + this.threadIndex.incrementAndGet());
                     }
                 });
-        //启动服务器
+        //参数设置
         ServerBootstrap childHandler = this.serverBootstrap.group(eventLoopGroupBoss, eventLoopGroupSelector)
                 .channel(useEpoll() ? EpollServerSocketChannel.class : NioServerSocketChannel.class)
                 .option(ChannelOption.SO_BACKLOG, 1024)
@@ -164,11 +166,39 @@ public class NettyRemotingServer extends NettyRemotingAbstract implements Remoti
                                         new NettyEncoder(),
                                         new NettyDecoder(),
                                         new IdleStateHandler(0, 0, nettyServerConfig.getServerChannelMaxIdleTimeSeconds()),
-                                        )
+                                        new NettyConnectManageHandler(),
+                                        new NettyServerHandler()
+                                );
                     }
                 });
+        //todo：为什么不直接在原来的对象上设置
+        if (nettyServerConfig.isServerPooledByteBufAllocatorEnable()){
+            childHandler.childOption(ChannelOption.ALLOCATOR, PooledByteBufAllocator.DEFAULT);
+        }
+
+        //启动
+        try {
+            ChannelFuture sync = this.serverBootstrap.bind().sync();
+            InetSocketAddress addr = (InetSocketAddress) sync.channel().localAddress();
+            this.port = addr.getPort();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         //启动eventExecutor
+        if (this.channelEventListener != null){
+            this.nettyEventExecutor.start();
+        }
         //启动定时任务， 扫描ResponseTable
+        this.timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                try {
+                    NettyRemotingServer.this.scanResponseTable();
+                } catch (Exception e) {
+                    log.error("scanResponseTable exception", e);
+                }
+            }
+        }, 1000 * 3, 1000);
     }
 
     @Override
@@ -178,7 +208,7 @@ public class NettyRemotingServer extends NettyRemotingAbstract implements Remoti
 
     @Override
     public void registerRPCHook(RPCHook rpcHook) {
-
+        this.rpcHook = rpcHook;
     }
 
     @Override
