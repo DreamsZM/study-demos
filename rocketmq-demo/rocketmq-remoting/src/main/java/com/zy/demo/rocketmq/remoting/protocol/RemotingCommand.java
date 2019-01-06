@@ -1,11 +1,17 @@
 package com.zy.demo.rocketmq.remoting.protocol;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.zy.demo.rocketmq.remoting.CommandCustomHeader;
+import com.zy.demo.rocketmq.remoting.annotation.CFNotNull;
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.commons.lang3.StringUtils;
 
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Field;
+import java.nio.ByteBuffer;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Getter
@@ -47,12 +53,37 @@ public class RemotingCommand {
     private static volatile int configVersion = -1;
     private AtomicInteger requestId = new AtomicInteger(0);
     private int opaque = requestId.getAndIncrement();
+
+    public static final int RPC_TYPE = 0;
+    public static final int RPC_ONEWAY = 1;
+    /**
+     * mark oneway, type
+     */
     private int flag = 0;
     private String remark;
     private HashMap<String, String> extFields;
 
+    private transient CommandCustomHeader customHeader;
+    private transient byte[] body;
+
+    private SerializeType serializeTypeCurrentRPC = serializeTypeConfigInTheisServer;
+
+    /**
+     * 显式声明泛型，能够增强兼容性
+     */
+    private static final Map<Class<? extends CommandCustomHeader>, Field[]> CLASS_HASH_MAP =
+            new HashMap<Class<? extends CommandCustomHeader>, Field[]>();
+    private static final Map<Class, String> CANONICAL_NAME_CASHE = new HashMap<>();
+    private static final Map<Field, Boolean> NULLABLE_FIELD_CACHE = new HashMap<>();
+
     protected RemotingCommand() {}
 
+    /**
+     *
+     * @param code TODO：
+     * @param customHeader 自定义的请求头
+     * @return
+     */
     public static RemotingCommand createRequestCommand(int code, CommandCustomHeader customHeader){
         RemotingCommand cmd = new RemotingCommand();
 
@@ -60,8 +91,10 @@ public class RemotingCommand {
     }
 
     /**
-     * todo:
      * Class<? extends CommandCustomHeader> classHeader 和 CommandCustomHeader 的区别是什么
+     * 利用反射实例化对象，只提供类即可实现依赖注入
+     * 不需要自己创建对象
+     * TODO:优点？？？
      * @param classHeader
      * @return
      */
@@ -90,6 +123,115 @@ public class RemotingCommand {
         }
     }
 
+    /**
+     * command的encode 和 decode
+     */
+
+    public static int getHeaderLength(int length){
+        //todo:
+
+    }
+
+    private static RemotingCommand headerDecode(byte[] headerData, SerializeType type){
+        //根据序列化类型进行序列化
+    }
+
+
+    /**
+     *
+     * @param array 字节数组，封装成ByteBuffer后decode
+     * @return
+     */
+    public static RemotingCommand decode(final byte[] array){
+        ByteBuffer buffer = ByteBuffer.wrap(array);
+        return decode(buffer);
+    }
+    public static RemotingCommand decode(final ByteBuffer byteBuffer){
+
+    }
+
+    /**
+     * 对body进行encode
+     * @param bodyLength
+     * @return
+     */
+    public ByteBuffer encodeHeader(final int bodyLength){
+
+        return null;
+    }
+
+    public ByteBuffer encodeHeader(){
+        return encodeHeader((this.body != null) ? body.length : 0);
+    }
+
+    public ByteBuffer encode(){
+
+    }
+
+    /**
+     * 使用位运算标记
+     */
+    public void markOneWayRPC(){
+        int bits = 1 << RPC_ONEWAY;
+        this.flag |= bits;
+    }
+
+    @JSONField(serialize = false)
+    public boolean isOneway(){
+        int bits = 1 << RPC_ONEWAY;
+        return (this.flag & bits) == bits;
+    }
+
+    @JSONField(serialize = false)
+    public RemotingCommandType getType(){
+        if (isResponseType()){
+            return RemotingCommandType.REPONSE_COMMAND;
+        }
+
+        return RemotingCommandType.REQUEST_COMMAND;
+    }
+
+    /**
+     * flag 的二进制形式的最后一位是1时为响应类型
+     * @return
+     */
+    @JSONField(serialize = false)
+    public boolean isResponseType(){
+        int bits = 1 << RPC_TYPE;
+        return (this.flag & bits) == bits;
+    }
+
+    public Field[] getClazzFields(Class<? extends CommandCustomHeader> classHeader){
+        Field[] fields = CLASS_HASH_MAP.get(classHeader);
+        if (fields == null){
+            fields = classHeader.getDeclaredFields();
+            synchronized (CLASS_HASH_MAP){
+                CLASS_HASH_MAP.put(classHeader, fields);
+            }
+        }
+        return fields;
+    }
+
+    public boolean isFieldNullable(Field field){
+        if (!NULLABLE_FIELD_CACHE.containsKey(field)){
+            Annotation annotation = field.getAnnotation(CFNotNull.class);
+            synchronized (NULLABLE_FIELD_CACHE){
+                NULLABLE_FIELD_CACHE.put(field, annotation == null);
+            }
+        }
+        return NULLABLE_FIELD_CACHE.get(field);
+    }
+
+    public String getCanonicalName(Class clazz){
+        String name = CANONICAL_NAME_CASHE.get(clazz);
+        if (name == null){
+            name = clazz.getCanonicalName();
+            synchronized (CANONICAL_NAME_CASHE){
+                CANONICAL_NAME_CASHE.put(clazz, name);
+            }
+        }
+        return name;
+    }
 
 
 }
