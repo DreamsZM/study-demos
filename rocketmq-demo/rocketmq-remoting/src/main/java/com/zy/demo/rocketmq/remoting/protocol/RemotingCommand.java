@@ -33,4 +33,6 @@ public class RemotingCommand {
     private int opaque = requestId.getAndIncrement();
     private int flag = 0;
 
+    public static final String SERIALIZE_TYPE_PROPERTY = "rocketmq.serialize.type";
+
 }
