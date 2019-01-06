@@ -12,10 +12,14 @@
         <module name="design-pattern" />
         <module name="flink-demo" />
         <module name="jvm-demo" />
+        <module name="namesrv" />
         <module name="netty-demo" />
         <module name="rocketmq-remoting" />
         <module name="threadlocal" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="rocketmq-remoting" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -152,11 +152,33 @@ public class RemotingCommand {
 
     /**
      * 对body进行encode
+     * TODO: 使用netty 传输，编码为ByteBuf
      * @param bodyLength
      * @return
      */
     public ByteBuffer encodeHeader(final int bodyLength){
+        int length = 4;
 
+        byte[] headerData;
+        headerData = this.headerEncode();
+
+        length += headerData.length;
+
+        length += bodyLength;
+
+        ByteBuffer result = ByteBuffer.allocate(4 + length - bodyLength);
+
+        /**
+         * 整条命令的长度，包括body
+         */
+        result.putInt(length);
+
+        //header length
+        result.put(markProtocolType(headerData.length, serializeTypeCurrentRPC));
+
+        result.put(headerData);
+
+        result.flip();
         return null;
     }
 
@@ -164,8 +186,35 @@ public class RemotingCommand {
         return encodeHeader((this.body != null) ? body.length : 0);
     }
 
+    /**
+     * 对RemotingCommand 进行编码
+     * length
+     * head length
+     * head data
+     * body data
+     * @return
+     */
     public ByteBuffer encode(){
+        int length = 4;
 
+    }
+
+    private byte[] headerEncode(){
+
+    }
+
+    public void makeCustomHeaderToNet(){
+
+    }
+
+    public static byte[] markProtocolType(int source, SerializeType type){
+        byte[] result = new byte[4];
+
+        result[0] = type.getCode();
+        result[1] = (byte)((source >> 16) & 0xFF);
+        result[2] = (byte) ((source >> 8) & 0xFF);
+        result[3] = (byte) (source & 0xFF);
+        return result;
     }
 
     /**
