@@ -46,6 +46,10 @@ public class RemotingCommand {
         }
     }
 
+    /**
+     * RemotingSysResponseCode
+     * 请求结果状态标识
+     */
     private int code;
     private LanguageCode languageCode = LanguageCode.JAVA;
     private int version = 0;
@@ -80,7 +84,7 @@ public class RemotingCommand {
 
     /**
      *
-     * @param code TODO：
+     * @param code TODO： RequestCode 请求码，标识请求的类型
      * @param customHeader 自定义的请求头
      * @return
      */
