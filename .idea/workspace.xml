@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f9f248d6-d9c3-443f-8b77-913fac9f406f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyRemotingServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyRemotingServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyRemotingAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyRemotingAbstract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/RemotingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/RemotingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/SerializeType.java" beforeDir="false" afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/SerializeType.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyRemotingServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4266">
-              <caret line="210" column="31" selection-start-line="210" selection-start-column="31" selection-end-line="210" selection-end-column="31" />
+            <state relative-caret-position="-3654">
+              <caret line="33" column="43" lean-forward="true" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1657#1658#0" expanded="true" />
@@ -51,12 +53,61 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+            <state relative-caret-position="506">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/zy/demo/common/utils/NamedThreadFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/RemotingCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/SerializeType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="29" column="34" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1-sources.jar!/org/apache/commons/lang3/concurrent/BasicThreadFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3696">
+              <caret line="90" column="13" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/pom.xml">
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -64,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyRemotingClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1848">
-              <caret line="104" column="9" lean-forward="true" selection-start-line="81" selection-start-column="8" selection-end-line="104" selection-end-column="9" />
+            <state relative-caret-position="1956">
+              <caret line="104" column="9" selection-start-line="81" selection-start-column="8" selection-end-line="104" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1459#1460#0" expanded="true" />
@@ -80,19 +131,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/ChannelEventListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyRemotingAbstract.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1134">
-              <caret line="152" column="38" lean-forward="true" selection-start-line="152" selection-start-column="38" selection-end-line="152" selection-end-column="38" />
+            <state relative-caret-position="452">
+              <caret line="91" column="21" lean-forward="true" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1714#1715#0" expanded="true" />
@@ -105,63 +147,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyEvent.java">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/event/EventType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyEventType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/common/ServiceThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#356#357#0" expanded="true" />
-                <element signature="e#420#421#0" expanded="true" />
-                <element signature="e#500#501#0" expanded="true" />
-                <element signature="e#535#536#0" expanded="true" />
-                <element signature="e#721#722#0" expanded="true" />
-                <element signature="e#747#748#0" expanded="true" />
-                <element signature="e#764#765#0" expanded="true" />
-                <element signature="e#795#796#0" expanded="true" />
-                <element signature="e#833#834#0" expanded="true" />
-                <element signature="e#864#865#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Thread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1016">
-              <caret line="913" column="16" selection-start-line="913" selection-start-column="16" selection-end-line="913" selection-end-column="16" />
-            </state>
+            <state relative-caret-position="-103" />
           </provider>
         </entry>
       </file>
@@ -188,14 +176,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/netty-demo/src/main/java/common/BoundedThreadPool.java" />
         <option value="$PROJECT_DIR$/netty-demo/src/main/java/common/ThreadPoolUtil.java" />
         <option value="$PROJECT_DIR$/netty-demo/src/main/java/common/NamedThreadFactory.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/zy/common/utils/PropertyUtil.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/zy/common/utils/ThreadPoolUtil.java" />
         <option value="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/NIOServerTest.java" />
         <option value="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/IOServer.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/netty-demo/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/IOClient.java" />
         <option value="$PROJECT_DIR$/netty-demo/src/main/java/com/zy/bio/NIOServer.java" />
@@ -224,7 +210,6 @@
         <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/RemotingServer.java" />
         <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/common/Pair.java" />
         <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/RemotingClient.java" />
-        <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/SerializeType.java" />
         <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/RemotingSysReponseCode.java" />
         <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/RemotingCommandType.java" />
         <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/LanguageCode.java" />
@@ -236,9 +221,12 @@
         <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyServerConfig.java" />
         <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyEvent.java" />
         <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/common/ServiceThread.java" />
-        <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyRemotingAbstract.java" />
         <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyRemotingClient.java" />
         <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyRemotingServer.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyRemotingAbstract.java" />
+        <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/SerializeType.java" />
+        <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/RemotingCommand.java" />
       </list>
     </option>
   </component>
@@ -291,6 +279,51 @@
             <path>
               <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
               <item name="study-demos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zy" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
@@ -392,6 +425,17 @@
               <item name="rocketmq-remoting" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="remoting" type="462c0819:PsiDirectoryNode" />
+              <item name="protocol" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
+              <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="rocketmq-remoting" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -405,7 +449,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/flink-demo/src/test/java/com/zy/demo/Test.java" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546679293622" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546744539441" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -525,12 +569,12 @@
       <workItem from="1546313088764" duration="8574000" />
       <workItem from="1546416747218" duration="9546000" />
       <workItem from="1546511621192" duration="35629000" />
-      <workItem from="1546657214810" duration="17303000" />
+      <workItem from="1546657214810" duration="20677000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71052000" />
+    <option name="totallyTimeSpent" value="74426000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -545,7 +589,7 @@
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1945629" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1945629" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -623,46 +667,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/io/NIOServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Void.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/io/IOClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/zy/demo/common/utils/JedisUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="e#183#184#0" expanded="true" />
-            <element signature="e#239#240#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/netty-demo/src/main/java/com/zy/demo/netty/server/netty/handler/FirstServerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -784,13 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/RemotingCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/common/Pair.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -812,17 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/SerializeType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="e#190#191#0" expanded="true" />
-            <element signature="e#222#223#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -973,7 +959,7 @@
     <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/ChannelEventListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
-          <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -1021,24 +1007,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyRemotingAbstract.java">
+    <entry file="file://$PROJECT_DIR$/common/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="152" column="38" lean-forward="true" selection-start-line="152" selection-start-column="38" selection-end-line="152" selection-end-column="38" />
+        <state relative-caret-position="550">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/zy/demo/common/utils/NamedThreadFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar!/org/apache/commons/lang3/concurrent/BasicThreadFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1-sources.jar!/org/apache/commons/lang3/concurrent/BasicThreadFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3696">
+          <caret line="90" column="13" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1714#1715#0" expanded="true" />
-            <element signature="e#1733#1734#0" expanded="true" />
-            <element signature="e#3714#3715#0" expanded="true" />
-            <element signature="e#3785#3786#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyRemotingClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1848">
-          <caret line="104" column="9" lean-forward="true" selection-start-line="81" selection-start-column="8" selection-end-line="104" selection-end-column="9" />
+        <state relative-caret-position="1956">
+          <caret line="104" column="9" selection-start-line="81" selection-start-column="8" selection-end-line="104" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1459#1460#0" expanded="true" />
@@ -1053,8 +1065,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyRemotingServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4266">
-          <caret line="210" column="31" selection-start-line="210" selection-start-column="31" selection-end-line="210" selection-end-column="31" />
+        <state relative-caret-position="-3654">
+          <caret line="33" column="43" lean-forward="true" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1657#1658#0" expanded="true" />
@@ -1077,11 +1089,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        <state relative-caret-position="-103" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/netty/NettyRemotingAbstract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="91" column="21" lean-forward="true" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1714#1715#0" expanded="true" />
+            <element signature="e#1733#1734#0" expanded="true" />
+            <element signature="e#3714#3715#0" expanded="true" />
+            <element signature="e#3785#3786#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/SerializeType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/RemotingCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
         </state>
       </provider>
     </entry>
