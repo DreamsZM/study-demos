@@ -2,28 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5a83275-3271-47c3-bf8f-9c4c37c9568e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/namesrv/src/main/java/com/zy/demo/rocketmq/namesrv/NamesrvController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/namesrv/src/main/java/com/zy/demo/rocketmq/namesrv/NamesrvStartup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/namesrv/src/main/java/com/zy/demo/rocketmq/namesrv/routeInfo/RouteInfoManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/DataVersion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/TopicConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/TopicFilterType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/constant/DBMsgConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/constant/LoggerName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/constant/PermName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/namesrv/RegisterBrokerResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/protocol/MQProtocolHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/protocol/RequestCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/protocol/ResponseCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/protocol/body/KVTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/protocol/route/BrokerData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/protocol/route/QueueData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/protocol/route/TopicRouteData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-web/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rocketmq-demo/namesrv/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rocketmq-demo/namesrv/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/RemotingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/RemotingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/common/target/" />
@@ -36,6 +20,7 @@
     <ignored path="$PROJECT_DIR$/rocketmq-demo/namesrv/target/" />
     <ignored path="$PROJECT_DIR$/jvm-demo/target/" />
     <ignored path="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/target/" />
+    <ignored path="$PROJECT_DIR$/spring-web/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +29,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rocketmq-demo/namesrv/src/main/java/com/zy/demo/rocketmq/namesrv/routeInfo/RouteInfoManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="990">
@@ -52,6 +37,16 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spring-web/pom.xml">
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -172,6 +167,7 @@
         <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/TopicFilterType.java" />
         <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/TopicConfig.java" />
         <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/constant/PermName.java" />
+        <option value="$PROJECT_DIR$/spring-web/pom.xml" />
       </list>
     </option>
   </component>
@@ -181,6 +177,17 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="spring-web" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -202,103 +209,20 @@
             <path>
               <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
               <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
               <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="namesrv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="namesrv" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
               <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="namesrv" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="namesrv" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="namesrv" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="namesrv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="namesrv" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="namesrv" type="462c0819:PsiDirectoryNode" />
-              <item name="routeInfo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -309,7 +233,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546780384832" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546786112360" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../first-app-demo" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -337,6 +262,102 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_study-demos" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="16182" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Debug with VisualVM">
+        <option name="DEBUG_PORT" value="16183" />
+        <option name="visualVMId" value="288102801061300" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug with VisualVM">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run with VisualVM">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.PermName" />
@@ -353,16 +374,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546769403710</updated>
-      <workItem from="1546769406294" duration="9183000" />
+      <workItem from="1546769406294" duration="11724000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9183000" />
+    <option name="totallyTimeSpent" value="11724000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="Web" side_tool="true" />
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
       <window_info id="UI Designer" order="2" />
@@ -371,15 +394,16 @@
       <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.19189766" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Run with VisualVM" />
+      <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="bottom" id="MyBatis Sql Log" />
       <window_info anchor="bottom" id="Messages" weight="0.32962137" />
       <window_info anchor="bottom" id="Debug with VisualVM" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32962137" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.32962137" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Statistic" order="3" weight="0.32962137" />
       <window_info anchor="bottom" id="Database Changes" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="5" weight="0.32962137" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="6" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" />
@@ -393,7 +417,7 @@
       <window_info anchor="right" id="Database" order="2" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.32995737" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
@@ -573,6 +597,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-web/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>

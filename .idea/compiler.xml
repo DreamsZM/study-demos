@@ -16,6 +16,7 @@
         <module name="netty-demo" />
         <module name="rocketmq-common" />
         <module name="rocketmq-remoting" />
+        <module name="spring-web" />
         <module name="threadlocal" />
       </profile>
     </annotationProcessing>
