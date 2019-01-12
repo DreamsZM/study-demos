@@ -133,11 +133,12 @@ public class RemotingCommand {
 
     public static int getHeaderLength(int length){
         //todo:
-
+        return 0;
     }
 
     private static RemotingCommand headerDecode(byte[] headerData, SerializeType type){
         //根据序列化类型进行序列化
+        return null;
     }
 
 
@@ -151,7 +152,7 @@ public class RemotingCommand {
         return decode(buffer);
     }
     public static RemotingCommand decode(final ByteBuffer byteBuffer){
-
+        return null;
     }
 
     /**
@@ -200,11 +201,11 @@ public class RemotingCommand {
      */
     public ByteBuffer encode(){
         int length = 4;
-
+        return null;
     }
 
     private byte[] headerEncode(){
-
+        return null;
     }
 
     public void makeCustomHeaderToNet(){
