@@ -2,15 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5a83275-3271-47c3-bf8f-9c4c37c9568e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/zy/demo/common/utils/FileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/ConfigManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/MixAll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/ThreadFactoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-srvutil/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-srvutil/src/main/java/com/zy/demo/rocketmq/srvutil/FileWatchService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-srvutil/src/main/java/com/zy/demo/rocketmq/srvutil/ServerUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-srvutil/src/main/java/com/zy/demo/rocketmq/srvutil/ShutdownHookThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-store/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/AppendMessageCallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/MessageArrivingListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/MessageFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/MessageStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/PutMessageLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/PutMessageReentrantLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/PutMessageResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/PutMessageSpinLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/PutMessageStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/QueryMessageResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/RemotingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/RemotingCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-web/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rocketmq-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rocketmq-demo/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/common/target/" />
@@ -24,6 +34,8 @@
     <ignored path="$PROJECT_DIR$/jvm-demo/target/" />
     <ignored path="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/target/" />
     <ignored path="$PROJECT_DIR$/spring-web/target/" />
+    <ignored path="$PROJECT_DIR$/rocketmq-demo/rocketmq-srvutil/target/" />
+    <ignored path="$PROJECT_DIR$/rocketmq-demo/rocketmq-store/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,112 +45,91 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/zy/demo/common/utils/FileUtils.java">
+        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/MessageStore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+            <state relative-caret-position="44">
+              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-common/pom.xml">
+        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/MessageFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-            </state>
-          </provider>
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/MixAll.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+            <state relative-caret-position="44">
+              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/ConfigManager.java">
+        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/AppendMessageCallback.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="44">
+              <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/PutMessageLock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/MessageArrivingListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/PutMessageReentrantLock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/PutMessageSpinLock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/PutMessageResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/PutMessageStatus.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/ThreadFactoryImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="66" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#389#390#0" expanded="true" />
-                <element signature="e#433#434#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/RemotingCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="207" column="20" selection-start-line="207" selection-start-column="20" selection-end-line="207" selection-end-column="20" />
-              <folding>
-                <element signature="e#5390#5391#0" expanded="true" />
-                <element signature="e#5417#5418#0" expanded="true" />
-                <element signature="e#6459#6460#0" expanded="true" />
-                <element signature="e#6485#6486#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/constant/LoggerName.java">
+        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/QueryMessageResult.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="44">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/TopicFilterType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/namesrv/RegisterBrokerResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/protocol/body/KVTable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -149,6 +140,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -175,9 +167,13 @@
         <option value="$PROJECT_DIR$/spring-web/pom.xml" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/zy/demo/common/utils/FileUtils.java" />
         <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/RemotingCommand.java" />
-        <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/MixAll.java" />
         <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/ConfigManager.java" />
         <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/ThreadFactoryImpl.java" />
+        <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/MixAll.java" />
+        <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-srvutil/src/main/java/com/zy/demo/rocketmq/srvutil/FileWatchService.java" />
+        <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-srvutil/pom.xml" />
+        <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-srvutil/src/main/java/com/zy/demo/rocketmq/srvutil/ShutdownHookThread.java" />
+        <option value="$PROJECT_DIR$/rocketmq-demo/rocketmq-store/pom.xml" />
       </list>
     </option>
   </component>
@@ -193,7 +189,12 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="spring-web" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="rocketmq-srvutil" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="rocketmq-srvutil" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
       <select />
@@ -223,71 +224,26 @@
             <path>
               <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
               <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zy" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-demos" type="462c0819:PsiDirectoryNode" />
               <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
               <item name="study-demos" type="462c0819:PsiDirectoryNode" />
               <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-common" type="462c0819:PsiDirectoryNode" />
+              <item name="rocketmq-store" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
               <item name="study-demos" type="462c0819:PsiDirectoryNode" />
               <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-common" type="462c0819:PsiDirectoryNode" />
+              <item name="rocketmq-store" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
               <item name="study-demos" type="462c0819:PsiDirectoryNode" />
               <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-common" type="462c0819:PsiDirectoryNode" />
+              <item name="rocketmq-store" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -295,7 +251,7 @@
               <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
               <item name="study-demos" type="462c0819:PsiDirectoryNode" />
               <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-common" type="462c0819:PsiDirectoryNode" />
+              <item name="rocketmq-store" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -304,24 +260,24 @@
               <item name="study-demos" type="b2602c69:ProjectViewProjectNode" />
               <item name="study-demos" type="462c0819:PsiDirectoryNode" />
               <item name="rocketmq-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="rocketmq-common" type="462c0819:PsiDirectoryNode" />
+              <item name="rocketmq-store" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547303112769" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547303263975" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../first-app-demo" />
   </component>
   <component name="RunDashboard">
@@ -494,27 +450,28 @@
       <workItem from="1546868407490" duration="181000" />
       <workItem from="1547176784470" duration="3461000" />
       <workItem from="1547259219221" duration="1306000" />
-      <workItem from="1547266104397" duration="7251000" />
+      <workItem from="1547266104397" duration="7723000" />
+      <workItem from="1547353150993" duration="2316000" />
+      <workItem from="1547429656794" duration="1165000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23923000" />
+    <option name="totallyTimeSpent" value="27876000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Designer" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.20042644" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.20469083" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info id="Alibaba Cloud Explorer" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32814237" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32703003" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Statistic" order="3" weight="0.32962137" />
@@ -522,7 +479,7 @@
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.32962137" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="6" />
       <window_info anchor="bottom" id="Message" order="7" />
-      <window_info anchor="bottom" id="Find" order="8" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32962137" />
       <window_info anchor="bottom" id="Run" order="9" weight="0.32962137" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
@@ -534,7 +491,6 @@
       <window_info anchor="bottom" id="Messages" order="17" weight="0.32962137" />
       <window_info anchor="bottom" id="Debug with VisualVM" order="18" />
       <window_info anchor="bottom" id="Alibaba Cloud View" order="19" />
-      <window_info anchor="right" id="SciView" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Database" order="2" />
@@ -544,6 +500,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -619,10 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rocketmq-demo/namesrv/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-66" />
@@ -671,6 +624,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/zy/demo/common/utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/ConfigManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/ThreadFactoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="14" column="66" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/RemotingCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4180">
+          <caret line="207" column="20" selection-start-line="207" selection-start-column="20" selection-end-line="207" selection-end-column="20" />
+          <folding>
+            <element signature="e#5390#5391#0" expanded="true" />
+            <element signature="e#5417#5418#0" expanded="true" />
+            <element signature="e#6459#6460#0" expanded="true" />
+            <element signature="e#6486#6487#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/MixAll.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2508">
+          <caret line="117" column="24" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/namesrv/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-srvutil/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-srvutil/src/main/java/com/zy/demo/rocketmq/srvutil/FileWatchService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-srvutil/src/main/java/com/zy/demo/rocketmq/srvutil/ServerUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/constant/LoggerName.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -705,60 +745,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/zy/demo/common/utils/FileUtils.java">
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-srvutil/src/main/java/com/zy/demo/rocketmq/srvutil/ShutdownHookThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+        <state relative-caret-position="44">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-common/pom.xml">
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        <state relative-caret-position="132">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-remoting/src/main/java/com/zy/demo/rocketmq/remoting/protocol/RemotingCommand.java">
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/MessageStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="207" column="20" selection-start-line="207" selection-start-column="20" selection-end-line="207" selection-end-column="20" />
-          <folding>
-            <element signature="e#5390#5391#0" expanded="true" />
-            <element signature="e#5417#5418#0" expanded="true" />
-            <element signature="e#6459#6460#0" expanded="true" />
-            <element signature="e#6485#6486#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="44">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/MixAll.java">
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/MessageFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+        <state relative-caret-position="44">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/ConfigManager.java">
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/AppendMessageCallback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="44">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-common/src/main/java/com/zy/demo/rocketmq/common/ThreadFactoryImpl.java">
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/PutMessageLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="66" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="44">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/MessageArrivingListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/PutMessageReentrantLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/PutMessageSpinLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/PutMessageResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/PutMessageStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocketmq-demo/rocketmq-store/src/main/java/com/zy/demo/rocketmq/store/QueryMessageResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
         </state>
       </provider>
     </entry>

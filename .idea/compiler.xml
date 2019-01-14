@@ -16,6 +16,8 @@
         <module name="netty-demo" />
         <module name="rocketmq-common" />
         <module name="rocketmq-remoting" />
+        <module name="rocketmq-store" />
+        <module name="rocketmqsrvutil" />
         <module name="threadlocal" />
       </profile>
     </annotationProcessing>
