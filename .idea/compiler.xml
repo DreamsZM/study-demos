@@ -18,6 +18,8 @@
         <module name="rocketmq-remoting" />
         <module name="rocketmq-store" />
         <module name="rocketmqsrvutil" />
+        <module name="SPI-demo" />
+        <module name="stream" />
         <module name="threadlocal" />
       </profile>
     </annotationProcessing>
