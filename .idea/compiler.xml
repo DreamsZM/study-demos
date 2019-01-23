@@ -7,15 +7,28 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common" />
+        <module name="database-demo" />
         <module name="demos-designpattern" />
         <module name="demos-threadlocal" />
         <module name="design-pattern" />
         <module name="flink-demo" />
         <module name="jvm-demo" />
+        <module name="namesrv" />
         <module name="netty-demo" />
+        <module name="rocketmq-common" />
+        <module name="rocketmq-namesrv" />
         <module name="rocketmq-remoting" />
+        <module name="rocketmq-srvutil" />
+        <module name="rocketmq-store" />
+        <module name="rocketmqsrvutil" />
+        <module name="SPI-demo" />
+        <module name="stream" />
         <module name="threadlocal" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="database-demo" target="1.8" />
+      <module name="spring-web" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

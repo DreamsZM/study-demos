@@ -13,6 +13,10 @@
     <packaging>pom</packaging>
     <modules>
         <module>rocketmq-remoting</module>
+        <module>namesrv</module>
+        <module>rocketmq-common</module>
+        <module>rocketmq-srvutil</module>
+        <module>rocketmq-store</module>
     </modules>
 
 

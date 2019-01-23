@@ -18,6 +18,15 @@ import java.util.concurrent.ExecutorService;
 public class NettyRemotingClient extends NettyRemotingAbstract implements RemotingClient {
     private static final Logger log = LoggerFactory.getLogger(NettyRemotingClient.class);
 
+    /**
+     * TODO:
+     * @param permitOneway
+     * @param permitAsync
+     */
+    public NettyRemotingClient(int permitOneway, int permitAsync) {
+        super(permitOneway, permitAsync);
+    }
+
     @Override
     public RemotingCommand invokeSync(String addr, RemotingCommand request, long timeoutMillis) {
         return null;

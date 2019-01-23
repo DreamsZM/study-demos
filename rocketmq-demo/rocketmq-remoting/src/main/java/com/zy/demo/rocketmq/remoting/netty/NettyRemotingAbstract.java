@@ -82,6 +82,13 @@ public abstract class NettyRemotingAbstract {
 
     }
 
+    /**
+     * Server和Client的都需要，进行抽象
+     * @param channel
+     * @param request
+     * @param timeoutMillis
+     * @return
+     */
     public RemotingCommand invokeSyncImpl(final Channel channel, final RemotingCommand request, final long timeoutMillis){
         return null;
     }
