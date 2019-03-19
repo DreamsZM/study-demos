@@ -1,10 +1,10 @@
 package com.zy.date;
 
-import java.time.Instant;
+import java.util.Date;
 
 public class Test {
     public static void main(String[] args) {
-        String dateStr = DateUtils.format(Instant.now());
+        String dateStr = DateUtils.format(new Date());
         System.out.println(dateStr);
     }
 }
