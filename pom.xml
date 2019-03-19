@@ -18,6 +18,8 @@
         <module>rocketmq-demo</module>
         <module>spring-web</module>
         <module>java-demo</module>
+      <module>database-demo</module>
+      <module>database-demo</module>
     </modules>
 
     <name>demos</name>
