@@ -1,18 +1,42 @@
 package com.zy.date;
 
-import java.util.Date;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.Semaphore;
 
 public class Test {
-    public static void main(String[] args) {
+    static int result = 0;
+    public static void main(String[] args) throws InterruptedException {
+        int N = 3;
+        Thread[] threads = new Thread[N];
+        final Semaphore[] syncObjects = new Semaphore[N];
+        for (int i = 0; i < N; i++) {
+            syncObjects[i] = new Semaphore(1);
+            if (i != N-1){
+                syncObjects[i].acquire();
+            }
+        }
+        for (int i = 0; i < N; i++) {
+            final Semaphore lastSemphore = i == 0 ? syncObjects[N - 1] : syncObjects[i - 1];
+            final Semaphore curSemphore = syncObjects[i];
+            final int index = i;
+            threads[i] = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        while (true) {
+                            lastSemphore.acquire();
+                            System.out.println("thread" + index + ": " + result++);
+                            if (result > 100){
+                                System.exit(0);
+                            }
+                            curSemphore.release();
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
 
-        ExecutorService executorService = Executors.newFixedThreadPool(20);
-        for (int i = 0; i < 20; i++) {
-            executorService.execute(() -> {
-                String dateStr = DateUtils.format(new Date());
-                System.out.println(dateStr);
+                }
             });
+            threads[i].start();
         }
     }
 }
