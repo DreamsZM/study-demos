@@ -11,6 +11,7 @@
         <module name="demos-threadlocal" />
         <module name="design-pattern" />
         <module name="flink-demo" />
+        <module name="Java8" />
         <module name="jvm-demo" />
         <module name="namesrv" />
         <module name="netty-demo" />
